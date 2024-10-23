@@ -1,0 +1,37 @@
+h1{
+    text-align: center;
+    margin-bottom: 1.2rem;
+    color: #212529;
+}
+
+.apps{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.2rem;
+    gap: 1.6rem;
+
+    .app{
+        background: #6741d9;
+        border-radius: 18px;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 300ms all;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 0 8px 2px rgba($color: #000000, $alpha: 0.1);
+
+        p{
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #f3f0ff;
+            margin: 0;            
+        }
+    }
+
+    .app:hover{
+        transform: scale(1.1, 1.1);
+        box-shadow: 0 0 12px 6px rgba($color: #000000, $alpha: 0.15);
+    }
+}
