@@ -5,20 +5,22 @@ https://dev.to/jisan/20-dom-projects-your-frontend-breakthrough-1h8a
 
 Also learning to create some API's with Deno
 
-## Running the Angular app
+## Installing Packages
 
 Navigate to the folder using the command
 
-`cd src/client-side`
-
 Install packages
 
-`npm install`
+`npm run install`
 
-Run project
+Run projects Front-end and Backend
 
-`ng serve`
+`npm start`
 
-Open the browser on this url
+Open the browser on this url for Front-end
+
+[Angular Site](localhost:4200)
+
+Open the browser on this url for Front-end
 
 [Angular Site](localhost:4200)

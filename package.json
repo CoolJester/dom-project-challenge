@@ -4,7 +4,8 @@
   "description": "Justing learning and brushing up my front-end skills",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd src && cd client-side && ng serve\" \"cd src && cd server-side && deno run dev\""
   },
   "keywords": [
     "learning",
@@ -12,5 +13,8 @@
     "ntsako"
   ],
   "author": "Ntsako Baloyi",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
 }
