@@ -1,0 +1,30 @@
+<div class="form-container">
+    <form (ngSubmit)="onSubmit(mainForm)" #mainForm="ngForm">
+        <h1>Registration Form</h1>
+        <div class="form-fields">
+            <div class="field">
+                <label for="username">Username</label>
+                <input class="form-control" [ngClass]="{'invalid-input': username.invalid && username.touched}" type="text" name="username" id="username" #username="ngModel" ngModel required>
+                <span [ngClass]="{'display-span': username.invalid && username.touched}">Username cannot be blank</span>
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input class="form-control" [ngClass]="{'invalid-input': email.invalid && email.touched}" type="email" name="email" id="email" ngModel #email="ngModel" required>
+                <span [ngClass]="{'display-span': email.invalid && email.touched && email.validator}">Email cannot be blank</span>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input class="form-control" [ngClass]="{'invalid-input': password.invalid && password.touched}" type="password" name="password" id="password" ngModel #password="ngModel" required>
+                <span [ngClass]="{'display-span': password.invalid && password.touched}">Password cannot be blank</span>
+            </div>
+            <div class="field">
+                <label for="username">Re-type Password</label>
+                <input class="form-control" [ngClass]="{'invalid-input': repassword.invalid && repassword.touched}" type="password" name="re-password" id="re-password" ngModel #repassword="ngModel" required>
+                <span [ngClass]="{'display-span': repassword.invalid && repassword.touched}">Field cannot be blank</span>
+            </div>
+            <div class="field">
+                <button type="submit" [ngClass]="{'button-disabled': mainForm.invalid}" [disabled]="mainForm.invalid">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
