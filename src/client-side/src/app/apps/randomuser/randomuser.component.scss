@@ -1,0 +1,93 @@
+$padding-sm: 1.4rem;
+$padding-md: 2rem;
+$padding-lg: 3.2rem;
+
+$shadow:  0 0 24px 4px rgba($color: #616161, $alpha: 0.2);
+
+
+.main-container{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .user-profile{
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: $shadow;
+
+        .user-header{
+            padding: 0;
+            background-color: #d0ebff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                border: 4px double #1864ab;
+                background-color: white;
+                width: 6.4rem;
+                height: 6.4rem;
+                position: relative;
+                top: 2.4rem;
+                overflow: hidden;
+                border-radius: 50px;
+            }
+        }
+
+        .user-body{
+            padding: $padding-sm;
+            padding-top: 4.2rem;
+            background-color: #e7f5ff;
+            .body-info{
+                text-align: center;
+                padding: $padding-md;
+                margin-bottom: 1.2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+                h1{
+                    font-size: 1.4rem;
+                    color: #868e96;
+
+                }
+                h2{
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+            .body-buttons{
+                display: flex;
+                justify-content: space-evenly;
+                padding: $padding-sm;
+                svg{
+                    width: 2.4rem;
+                    cursor: pointer;
+                }
+            }
+        }   
+        .user-next{
+            padding: $padding-sm;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d0ebff;
+
+            button{
+                background-color: #1971c2;
+                border: 0;
+                padding: 1.2rem 2.4rem;
+                transition: all 300ms;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-radius: 50px;
+                color: white;
+            }
+            button:hover{
+                transform: scale(1.05, 1.05);
+                box-shadow: $shadow;
+            }
+        }
+    }
+}
