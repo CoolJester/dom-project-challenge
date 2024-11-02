@@ -1,8 +1,21 @@
 
 $base-background: linear-gradient(90deg, #4263eb, #748ffc, #bac8ff);
+$base-background-2: linear-gradient(90deg, #ffe066, #fab005, #e67700);
 $base-background-inverted: linear-gradient(90deg, #bac8ff, #748ffc, #4263eb);
 $base-background-disabled: linear-gradient(90deg, #dee2e6, #adb5bd, #343a40);
+$radius: 20px;
+$shadow:  0 0 24px 4px rgba($color: #616161, $alpha: 0.2);
 
+@mixin base-btn{
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 12px;
+    border: none;
+    transition: all 300ms;
+}
 
 .form-container{
     width: 100%;
@@ -16,9 +29,9 @@ $base-background-disabled: linear-gradient(90deg, #dee2e6, #adb5bd, #343a40);
         width: fit-content;
         min-width: 35%;
         height: fit-content;
-        border-radius: 20px;
+        border-radius: $radius;
         overflow: hidden;
-        box-shadow: 0 0 24px 4px rgba($color: #616161, $alpha: 0.2);
+        box-shadow: $shadow;
 
         h1{
             background: $base-background;
@@ -59,15 +72,8 @@ $base-background-disabled: linear-gradient(90deg, #dee2e6, #adb5bd, #343a40);
                     display: none;
                 }
                 button{
+                    @include base-btn;
                     background: $base-background;
-                    padding: 1rem;
-                    font-size: 1.4rem;
-                    font-weight: bold;
-                    color: white;
-                    text-transform: uppercase;
-                    border-radius: 12px;
-                    border: none;
-                    transition: all 300ms;
                 }
                 button:hover {
                     background: $base-background-inverted;
@@ -78,6 +84,32 @@ $base-background-disabled: linear-gradient(90deg, #dee2e6, #adb5bd, #343a40);
                 .display-span{
                     display: block;
                 }
+            }
+        }
+    }
+
+    .confimation{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: $radius;
+        box-shadow: $shadow;        
+
+        .header{
+            background: #fab005;
+            padding: 2.4rem;
+            h1{
+                font-size: 2.2rem;
+            }
+        }
+        .content{
+            padding: 2.4rem;
+            p{
+                font-size: 1.6rem;
+            }
+            button{
+                @include base-btn;
+                background: $base-background-2;
             }
         }
     }

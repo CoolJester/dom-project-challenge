@@ -1,30 +1,43 @@
 <div class="form-container">
-    <form (ngSubmit)="onSubmit(mainForm)" #mainForm="ngForm">
-        <h1>Registration Form</h1>
-        <div class="form-fields">
-            <div class="field">
-                <label for="username">Username</label>
-                <input class="form-control" [ngClass]="{'invalid-input': username.invalid && username.touched}" type="text" name="username" id="username" #username="ngModel" ngModel required>
-                <span [ngClass]="{'display-span': username.invalid && username.touched}">Username cannot be blank</span>
+    @if (formDisplay){
+        <form (ngSubmit)="onSubmit(mainForm)" #mainForm="ngForm">
+            <h1>Registration Form</h1>
+            <div class="form-fields">
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input class="form-control" [ngClass]="{'invalid-input': username.invalid && username.touched}" type="text" name="username" id="username" #username="ngModel" [ngModel]="formData.username" required>
+                    <span [ngClass]="{'display-span': username.invalid && username.touched}">Username cannot be blank</span>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input class="form-control" [ngClass]="{'invalid-input': email.invalid && email.touched}" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [ngModel]="formData.email" #email="ngModel" [email]="true" required>
+                    <span [ngClass]="{'display-span': email.invalid && email.touched && email.validator}">Please provided a valid email</span>
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input class="form-control" [ngClass]="{'invalid-input': password.invalid && password.touched}" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" type="password" name="password" id="password" [ngModel]="formData.password" #password="ngModel" required>
+                    <span [ngClass]="{'display-span': password.touched && password.dirty && password.invalid}">Password must be at least chars and contain Letters and Numbers</span>
+                </div>
+                <div class="field">
+                    <label for="username">Re-type Password</label>
+                    <input class="form-control" [ngClass]="{'invalid-input': repassword.invalid && repassword.touched}" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" type="password" name="re-password" id="re-password" [ngModel]="formData.repassword" #repassword="ngModel" required>
+                    <span [ngClass]="{'display-span': repassword.invalid && repassword.touched}">Field cannot be blank</span>
+                    <span [ngClass]="{'display-span': password.touched && repassword.touched && password.value != repassword.value}">Passwords do not match</span>
+                </div>
+                <div class="field">
+                    <button type="submit" [ngClass]="{'button-disabled': mainForm.invalid}" [disabled]="mainForm.invalid">Submit</button>
+                </div>
             </div>
-            <div class="field">
-                <label for="email">Email</label>
-                <input class="form-control" [ngClass]="{'invalid-input': email.invalid && email.touched}" type="email" name="email" id="email" ngModel #email="ngModel" required>
-                <span [ngClass]="{'display-span': email.invalid && email.touched && email.validator}">Email cannot be blank</span>
+        </form>
+    }@else {
+        <div class="confimation">
+            <div class="header">
+                <h1>Form Submission</h1>
             </div>
-            <div class="field">
-                <label for="password">Password</label>
-                <input class="form-control" [ngClass]="{'invalid-input': password.invalid && password.touched}" type="password" name="password" id="password" ngModel #password="ngModel" required>
-                <span [ngClass]="{'display-span': password.invalid && password.touched}">Password cannot be blank</span>
-            </div>
-            <div class="field">
-                <label for="username">Re-type Password</label>
-                <input class="form-control" [ngClass]="{'invalid-input': repassword.invalid && repassword.touched}" type="password" name="re-password" id="re-password" ngModel #repassword="ngModel" required>
-                <span [ngClass]="{'display-span': repassword.invalid && repassword.touched}">Field cannot be blank</span>
-            </div>
-            <div class="field">
-                <button type="submit" [ngClass]="{'button-disabled': mainForm.invalid}" [disabled]="mainForm.invalid">Submit</button>
+            <div class="content">
+                <p>Thank you for your submission {{formData.username}}</p>
+                <button (click)="formDisplay = !formDisplay">See Form Submission</button>
             </div>
         </div>
-    </form>
+    }
 </div>
