@@ -16,7 +16,7 @@
                 <div class="field">
                     <label for="password">Password</label>
                     <input class="form-control" [ngClass]="{'invalid-input': password.invalid && password.touched}" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" type="password" name="password" id="password" [ngModel]="formData.password" #password="ngModel" required>
-                    <span [ngClass]="{'display-span': password.touched && password.dirty && password.invalid}">Password must be at least chars and contain Letters and Numbers</span>
+                    <span [ngClass]="{'display-span': password.touched && password.dirty && password.invalid}">Password must be at least 8 chars and contain Letters and Numbers</span>
                 </div>
                 <div class="field">
                     <label for="username">Re-type Password</label>
