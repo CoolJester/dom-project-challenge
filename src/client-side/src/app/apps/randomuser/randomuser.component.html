@@ -1,7 +1,7 @@
 <div class="main-container">
     <div class="user-profile">
         <div class="user-header">
-            <img src="./assets/User.png" [src]="userData.results[0].picture.medium" alt="user image goes here">
+            <img src="./assets/User.png" [src]="userData.results[0].picture.medium || ''" alt="user image goes here">
         </div>
         <div class="user-body">
             <div class="body-info">

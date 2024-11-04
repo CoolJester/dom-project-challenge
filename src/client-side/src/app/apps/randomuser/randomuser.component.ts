@@ -49,19 +49,19 @@ export class RandomuserComponent implements OnInit{
     this.displayValues = [
       {
         heading: 'Hi, my name is',
-        content: `${this.userData.results[0].name.first} ${this.userData.results[0].name.last}`
+        content: `${this.userData.results[0].name.first || ''} ${this.userData.results[0].name.last || ''}`
       },
       {
         heading: 'My Email address is',
-        content: this.userData.results[0].email
+        content: this.userData.results[0].email || ''
       },
       {
         heading: 'My phone number is',
-        content: this.userData.results[0].phone
+        content: this.userData.results[0].phone || ''
       },
       {
         heading: 'I live at',
-        content: `${this.userData.results[0].location.city}, ${this.userData.results[0].location.country}`
+        content: `${this.userData.results[0].location.city || ''}, ${this.userData.results[0].location.country || ''}`
       },
     ]
   }
