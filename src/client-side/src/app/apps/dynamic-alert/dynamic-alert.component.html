@@ -1,4 +1,10 @@
 <div class="container py-3">
-    <h1>Container</h1>
-    <router-outlet></router-outlet>
+    <h1 class="my-3">Container</h1>
+    <app-alert [alertPayload]="alertPayload"></app-alert>
+    <br><hr>
+    <div class="options">
+        <button class="btn btn-primary" (click)="alertPayload = template[0]">Primary</button>
+        <button class="btn btn-danger" (click)="alertPayload = template[1]">Error</button>
+        <button class="btn btn-warning" (click)="alertPayload = template[2]">Warning</button>
+    </div>
 </div>

@@ -6,9 +6,6 @@ import { FormComponent } from './apps/form/form.component';
 import { RandomuserComponent } from './apps/randomuser/randomuser.component';
 import { MorseComponent } from './apps/morse/morse.component';
 import { DynamicAlertComponent } from './apps/dynamic-alert/dynamic-alert.component';
-import path from 'path';
-import { Component } from '@angular/core';
-import { SharedComponent } from './apps/dynamic-alert/shared/shared.component';
 
 export const routes: Routes = [
     {path: '', component: AppsComponent},
@@ -17,7 +14,5 @@ export const routes: Routes = [
     {path: 'form', component: FormComponent},
     {path: 'random-user', component: RandomuserComponent},
     {path: 'morse-code', component: MorseComponent},
-    {path: 'dynamic-alert', component: DynamicAlertComponent, 
-        children: [{path: 'alert', component: SharedComponent}]
-    }
+    {path: 'dynamic-alert', component: DynamicAlertComponent}
 ];
