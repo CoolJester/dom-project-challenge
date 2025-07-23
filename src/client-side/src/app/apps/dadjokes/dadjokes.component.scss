@@ -29,18 +29,32 @@
             font-size: 48px;
             text-align: center;
         }
-        button{
-            width: fit-content;
-            padding: 8px 16px;
-            background-color: #7048e8;
-            color: white;
-            border-radius: 12px;
-            border: none;
-            box-shadow: 0 0 8px 2px rgba($color: #000000, $alpha: 0.1);
-            transition: 300ms all;
+
+        .joke-container{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+
+            input{
+                font-size: 18px;
+                width: 50%;
+            }
+
+            button{
+                font-size: 18px;
+                width: fit-content;
+                padding: 8px 16px;
+                background-color: #7048e8;
+                color: white;
+                border-radius: 12px;
+                border: none;
+                box-shadow: 0 0 8px 2px rgba($color: #000000, $alpha: 0.1);
+                transition: 300ms all;
+            }
+            button:hover{
+                background-color: #9775fa;
+            }
         }
-        button:hover{
-            background-color: #9775fa;
-        }
+
     }
 }

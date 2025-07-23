@@ -1,0 +1,13 @@
+<div class="container-fluid mt-1">
+    <div class="flex-container">
+        <div class="flex-item" #firstElement>
+            <h2>Flex container-1</h2>
+        </div>
+        <div class="grabber" appResize [leftResize]="firstElement" [rightResize]="rightElement"></div>
+        <div class="flex-item" #rightElement>
+            <div class="upper-item" #upperElement></div>
+            <div class="inner-grabber" appResize []></div>
+            <div class="lower-item"#lowerElement></div>
+        </div>
+    </div>
+</div>
