@@ -1,7 +1,18 @@
 <div class="main-container">
     <div class="inner-container">
         <h1>Don't laugh challenge</h1>
-        <p>{{joke}}</p>
-        <button (click)="getJoke()" [disabled]="loading">Get Another Joke</button>
+        @if(joke){
+            <p>{{joke}}</p>
+        }@else {
+            <p>{{jokes.results[selectedJoke].joke}}</p>
+        }
+        <div class="joke-container">
+            <input class="form-control" type="text" placeholder="Type a search term..." name="search" #jokeInput>
+            <button (click)="getJoke(jokeInput.value);jokeInput.value = ''" [disabled]="loading">Get Another Joke</button>
+        
+            @if(jokes && jokes.results.length > 1){
+                <button (click)="selectedJoke = selectedJoke + 1">Next Joke</button>
+            }
+        </div>
     </div>
 </div>

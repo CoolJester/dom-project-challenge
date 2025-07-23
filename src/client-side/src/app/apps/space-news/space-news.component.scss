@@ -1,0 +1,41 @@
+.main-container{
+    padding: 3.4rem;
+    .search{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 3.4rem;
+
+        h1{
+            font-size: 2.2rem;
+        }
+        input{
+            font-size: 1.2rem;
+            width: 50%;
+        }
+    }
+    .news{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        h2{
+            font-size: 2rem;
+        }
+        .filter{
+
+        }
+
+        table{
+            thead{
+                .col-number{
+                    width: fit-content;
+                }
+            }
+            tbody{
+                cursor: pointer;
+            }
+        }
+    }
+}

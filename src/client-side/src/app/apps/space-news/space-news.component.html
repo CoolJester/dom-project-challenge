@@ -1,0 +1,34 @@
+<div class="main-container">
+    <div class="search container">
+        <h1>Search for News</h1>
+        <input class="form-control" type="text" placeholder="Enter Text to Search">
+    </div>
+    <div class="news">
+        <h2>Space Flight News</h2>
+        <div class="fliter">
+            <button class="btn btn-alert">Sort</button>
+        </div>
+        <table class="container table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th style="width: fit-content;">#</th>
+                    <th scope="col">Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(article of spaceArticles.results; track $index){
+                <tr (click)="articleClicked(article.id)">
+                    <th>{{$index + 1}}</th>
+                    <td>{{article.title}}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination align-center">
+                <li class="page-item"><a class="page-link" [ngClass]="{'disabled': !spaceArticles.previous}" (click)="prevClicked()">Previous</a></li>
+                <li class="page-item"><a class="page-link" [ngClass]="{'disabled': !spaceArticles.next}" (click)="nextClicked()">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
