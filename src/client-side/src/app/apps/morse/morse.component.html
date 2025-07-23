@@ -1,1 +1,38 @@
-<p>morse works!</p>
+<main>
+    <div class="header">
+        <div class="container">
+            <h1>Morse Code Translator</h1>
+            <p>It's easy to use Morse Code Translator, translate Morse code to text and text to Morse code.</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="functionality">
+
+            </div>
+            <div class="support">
+                <table>
+                    <thead>
+                        <th>
+                            Morse Code Chart
+                        </th>
+                    </thead>
+                    <tbody>
+                        @for(code of morseCode; track $index){
+                            <tr>
+                                <td>
+                                <span>{{code.letter}}</span>
+                                <span>{{code.combination}}</span>
+                            </td>
+                            @if($index == 6 || $index == 12 || $index == 18 || $index == 24 || $index == 30 || $index == 36 || $index == 42){
+                                <br>
+                            }
+                            </tr>
+                                
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>

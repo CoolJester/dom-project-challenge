@@ -1,0 +1,43 @@
+export type MorseType = {
+    letter: String,
+    combination: String
+  }
+
+export const morseIndex: Array<MorseType> = [
+    { letter: 'A', combination: '.-' },
+    { letter: 'B', combination: '-...' },
+    { letter: 'C', combination: '-.-.' },
+    { letter: 'D', combination: '-..' },
+    { letter: 'E', combination: '.' },
+    { letter: 'F', combination: '..-.' },
+    { letter: 'G', combination: '--.' },
+    { letter: 'H', combination: '....' },
+    { letter: 'I', combination: '..' },
+    { letter: 'J', combination: '.---' },
+    { letter: 'K', combination: '-.-' },
+    { letter: 'L', combination: '.-..' },
+    { letter: 'M', combination: '--' },
+    { letter: 'N', combination: '-.' },
+    { letter: 'O', combination: '---' },
+    { letter: 'P', combination: '.--.' },
+    { letter: 'Q', combination: '--.-' },
+    { letter: 'R', combination: '.-.' },
+    { letter: 'S', combination: '...' },
+    { letter: 'T', combination: '-' },
+    { letter: 'U', combination: '..-' },
+    { letter: 'V', combination: '...-' },
+    { letter: 'W', combination: '.--' },
+    { letter: 'X', combination: '-..-' },
+    { letter: 'Y', combination: '-.--' },
+    { letter: 'Z', combination: '--..' },
+    { letter: '0', combination: '-----' },
+    { letter: '1', combination: '.----' },
+    { letter: '2', combination: '..---' },
+    { letter: '3', combination: '...--' },
+    { letter: '4', combination: '....-' },
+    { letter: '5', combination: '.....' },
+    { letter: '6', combination: '-....' },
+    { letter: '7', combination: '--...' },
+    { letter: '8', combination: '---..' },
+    { letter: '9', combination: '----.' }
+  ];
