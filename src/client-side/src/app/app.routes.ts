@@ -7,7 +7,6 @@ import { RandomuserComponent } from './apps/randomuser/randomuser.component';
 import { MorseComponent } from './apps/morse/morse.component';
 import { DynamicAlertComponent } from './apps/dynamic-alert/dynamic-alert.component';
 import { SpaceNewsComponent } from './apps/space-news/space-news.component';
-import { AccordionComponent } from './apps/accordion/accordion.component';
 import { ResizableComponent } from './apps/resizable/resizable.component';
 
 export const routes: Routes = [
@@ -19,7 +18,6 @@ export const routes: Routes = [
     {path: 'morse-code', component: MorseComponent},
     {path: 'dynamic-alert', component: DynamicAlertComponent},
     {path: 'space-flight-news', component: SpaceNewsComponent},
-    {path: 'accordion', component: AccordionComponent},
     {path: 'resizable', component: ResizableComponent},
     {path: '**', redirectTo: ''}
 ];
