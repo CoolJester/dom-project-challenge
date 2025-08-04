@@ -1,1 +1,26 @@
-<p>basic-calculator works!</p>
+<div class="main-container">
+    <div class="calculator">
+        <input class="calculator-display" placeholder="1 + 1" readonly/>
+        <div class="input-cell">
+            <label for="">Number 1</label>
+            <input type="number">
+        </div>
+        <div class="input-cell">
+            <label for="">Number 2</label>
+            <input type="number">
+        </div>
+        <div class="calculator-operator-input">
+            <label for="">Operator</label>
+            <select class="form-control" name="operators" id="operators">
+                <option value="*">Multiply (*)</option>
+                <option value="+">Add (+)</option>
+                <option value="-">Subtract (-)</option>
+                <option value="/">Divide (/)</option>
+            </select>
+        </div>
+        <div class="calculator-submit">
+            <button class="calculate">Calculate</button>
+            <button class="reset">Reset</button>
+        </div>
+    </div>
+</div>

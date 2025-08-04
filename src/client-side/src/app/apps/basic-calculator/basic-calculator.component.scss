@@ -1,0 +1,59 @@
+.main-container{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .calculator{
+        border: 2px solid #343a40;
+        padding: 0.8rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        
+        input, select{
+            width: 100%;            
+            padding: 0.4rem;
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+        }
+        
+        .calculator-display{
+            background: #d0ebff;
+            border: 2px solid #343a40;
+            border-radius: 8px;
+            cursor: default;
+        }
+        
+        .input-cell{
+            
+        }
+        
+        .calculator-submit{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            
+            button{
+                padding: 0.4rem;
+                border-radius: 8px;
+                border: 1px solid #ced4da;
+                transition: 300ms all;
+                font-weight: 450;
+            }
+            button:hover{
+                transform: scale(1.05, 1.05);
+            }
+
+            .calculate{
+                background: #a9e34b;
+            }
+
+            .reset{
+                background: #fa5252;
+            }
+        }
+    }
+}
