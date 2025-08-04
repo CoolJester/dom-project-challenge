@@ -1,0 +1,26 @@
+<div class="main-container">
+    <div class="calculator">
+        <input [(ngModel)]="result" class="calculator-display" placeholder="1 + 1" readonly/>
+        <div class="input-cell">
+            <label for="">Number 1</label>
+            <input type="number" [(ngModel)]="numberOne">
+        </div>
+        <div class="input-cell">
+            <label for="">Number 2</label>
+            <input type="number" [(ngModel)]="numberTwo">
+        </div>
+        <div class="calculator-operator-input">
+            <label for="">Operator</label>
+            <select [(ngModel)]="operator" class="form-control" name="operators" id="operators">
+                <option value="*">Multiply (*)</option>
+                <option value="+" selected="selected">Add (+)</option>
+                <option value="-">Subtract (-)</option>
+                <option value="/">Divide (/)</option>
+            </select>
+        </div>
+        <div class="calculator-submit">
+            <button (click)="evaluateExpression()" class="calculate">Calculate</button>
+            <button (click)="reset()" class="reset">Reset</button>
+        </div>
+    </div>
+</div>

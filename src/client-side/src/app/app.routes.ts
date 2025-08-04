@@ -8,6 +8,7 @@ import { MorseComponent } from './apps/morse/morse.component';
 import { DynamicAlertComponent } from './apps/dynamic-alert/dynamic-alert.component';
 import { SpaceNewsComponent } from './apps/space-news/space-news.component';
 import { ResizableComponent } from './apps/resizable/resizable.component';
+import { BasicCalculatorComponent } from './apps/basic-calculator/basic-calculator.component';
 
 export const routes: Routes = [
     {path: '', component: AppsComponent},
@@ -19,5 +20,6 @@ export const routes: Routes = [
     {path: 'dynamic-alert', component: DynamicAlertComponent},
     {path: 'space-flight-news', component: SpaceNewsComponent},
     {path: 'resizable', component: ResizableComponent},
+    {path: 'basic-calculator', component: BasicCalculatorComponent},
     {path: '**', redirectTo: ''}
 ];
