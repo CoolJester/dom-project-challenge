@@ -30,8 +30,18 @@ h1{
         }
     }
 
+    .disabled{
+        background: grey;
+        cursor: default;
+    }
+
     .app:hover{
         transform: scale(1.1, 1.1);
         box-shadow: 0 0 12px 6px rgba($color: #000000, $alpha: 0.15);
+    }
+
+    .disabled:hover{
+        transform: none;
+        box-shadow: none;
     }
 }
