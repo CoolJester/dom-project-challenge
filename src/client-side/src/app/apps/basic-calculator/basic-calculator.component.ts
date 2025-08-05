@@ -14,14 +14,14 @@ export class BasicCalculatorComponent {
   numberOne: string;
   numberTwo: string;
   operator: string;
-  result: string;
+  result: string = 'e.g 1 + 1';
 
   evaluateExpression(){
     var expression = `${this.numberOne} ${this.operator} ${this.numberTwo}`;
 
     try {
-      var result = evaluate(expression);
-      console.log(`Experssion: ${expression} Evaluation: ${result}`);
+      this.result = evaluate(expression);
+      console.log(`Experssion: ${expression} Evaluation: ${this.result}`);
     } catch (error) {
       console.warn(`Experssion: ${expression}`);
       console.error('Something went wrong: ', error);
