@@ -9,6 +9,7 @@ import { DynamicAlertComponent } from './apps/dynamic-alert/dynamic-alert.compon
 import { SpaceNewsComponent } from './apps/space-news/space-news.component';
 import { ResizableComponent } from './apps/resizable/resizable.component';
 import { BasicCalculatorComponent } from './apps/basic-calculator/basic-calculator.component';
+import { NormalCalculatorComponent } from './apps/normal-calculator/normal-calculator.component';
 
 export const routes: Routes = [
     {path: '', component: AppsComponent},
@@ -21,5 +22,6 @@ export const routes: Routes = [
     {path: 'space-flight-news', component: SpaceNewsComponent},
     {path: 'resizable', component: ResizableComponent},
     {path: 'basic-calculator', component: BasicCalculatorComponent},
+    {path: 'normal-calculator', component: NormalCalculatorComponent},
     {path: '**', redirectTo: ''}
 ];
