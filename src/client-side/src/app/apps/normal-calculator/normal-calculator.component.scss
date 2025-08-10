@@ -1,0 +1,81 @@
+.calculator-container{
+    width: 100%;
+    min-height: 80vh;
+    background-image: url(../../../../assets/images/backgrounds/normal-calculator-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .calculator{
+        padding: 1.2rem;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: 0 0 12px 2px rgba($color: #000000, $alpha: 0.1);
+
+        .preview, .total{
+            font-size: 22px;
+            font-weight: bold;
+            text-align: end;
+            margin-bottom: 1.2rem;
+        }
+
+        .preview{
+            color: #868e96;
+        }
+
+        .total{
+            color: #495057;
+        }
+
+        .buttons{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-row-gap: 0.8rem;
+            grid-column-gap: 1.2rem;
+
+            .span-two{
+                grid-column: 3 / span 2;
+            }
+
+            button{
+                padding: 8px 16px;
+                border: none;
+                border-radius: 8px;
+                transition: 300ms all;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // For the Icon
+                svg{
+                    width: 18px;
+                }
+            }
+
+            button:hover {
+                transform: scale(1.1, 1.1);
+                box-shadow: 0 0 8px 2px rgba($color: #000000, $alpha: 0.1);
+                font-weight: bold;
+            }
+
+            // Color Backgrounds
+            .red{
+                background-color: #fa5252;
+                color: white;
+            }
+
+            .yellow{
+                background-color: #fab005;
+                color: white;
+            }
+
+            .green{
+                background-color: #40c057;
+                color: white;
+            }
+        }
+    }
+}
